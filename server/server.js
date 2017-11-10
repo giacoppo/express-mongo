@@ -7,7 +7,7 @@ var morgan = require('morgan');
 var lionRouter = require('./lions');
 var tigerRouter = require('./tigers');
 
-app.use(morgan('dev'));
+app.use(morgan('dev'))
 app.use(express.static('client'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -18,12 +18,8 @@ app.use('/tigers', tigerRouter);
 
 app.use(function(err, req, res, next) {
     if (err) {
-        console.log(err.message);
         res.status(500).send(err);
     }
 });
 
-
-
-app.listen(3000);
-console.log('on port 3000');
+module.exports = app;

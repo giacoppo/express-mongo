@@ -1,5 +1,6 @@
 ## Getting started
 * `npm i`
+* include "mocha": "^4.0.1" globally if not yet done by npm install -g mocha
 
 ## Todo
 
